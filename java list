@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+       // Scanner sc1=new Scanner(System.in);
+        int n=sc.nextInt();
+        List<Integer> arr=new ArrayList<Integer>();
+        for(int i=0;i<n;i++) {
+            arr.add(sc.nextInt());
+        }
+        int no_q=sc.nextInt();
+        for(int i=0;i<(no_q);i++) {
+            String st=sc.next();
+            
+            if(st.equals("Insert")) {
+               int x=sc.nextInt();
+                int y=sc.nextInt();
+                arr.add(x,y);
+                
+            } else if(st.equals("Delete")){
+                int del=sc.nextInt();
+                arr.remove(del);
+            }
+        }
+       for(Integer ac:arr) {
+            System.out.print(ac+" ");
+        }
+    }
+}
